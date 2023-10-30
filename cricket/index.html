@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+   
+    <button class="choice-button" onclick=" 
+   let ComputerChoice= generateComputerChoice();
+   
+   let resultMsg =getResult('Bat',ComputerChoice);
+   showResult('Bat',ComputerChoice,resultMsg);
+
+">
+<img src="img/bat.png" alt="bat image" class="choice-imges "></button>
+    <button class="choice-button" onclick=" 
+    ComputerChoice =generateComputerChoice();
+
+   resultMsg =getResult('Ball',ComputerChoice);
+   showResult('Ball',ComputerChoice,resultMsg);
+
+    
+    "><img src="img/ball.png" alt="ball image" class="choice-imges "></button>
+    <button class="choice-button" onclick=" 
+      ComputerChoice = generateComputerChoice();
+
+      resultMsg =getResult('stump',ComputerChoice);
+   showResult('stump',ComputerChoice,resultMsg);
+
+   "><img src="img/stump.png" alt="Stump Image" class="choice-imges "></button>
+
+   <h3 id="user-move"></h3>
+   <h3 id="computer-move"></h3>
+   <h3 id="result"></h3>
+   <h3 id="score"></h3>
+   <button  class="Reset-button"  onclick="localStorage.clear()
+  
+   resetScore();
+   ">Reset</button>
+    <script src="cricket.js"></script>
+</body>
+
+</html>
